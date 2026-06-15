@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Dashboard - Overview</title>
+
+    <!-- Bootstrap & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="d-flex">
+        <!-- Injected Sidebar -->
+        <div id="sidebar-container"></div>
+
+        <div class="main-content w-100">
+            <!-- Injected Navbar -->
+            <div id="navbar-container"></div>
+
+            <!-- Header -->
+            <div class="mb-4">
+                <h2 class="fw-bold mb-1">Hello Harsh 👋</h2>
+                <p class="text-muted">Let's learn something new today!</p>
+            </div>
+
+            <!-- ================= ROW 1 ================= -->
+            <div class="row">
+                <!-- Course -->
+                <div class="col-xl-3 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-title">Recent enrolled course</h6>
+                            <div class="p-3 rounded-4 mt-3 border" style="background-color: #ffffff;">
+                                <div class="border rounded-circle d-inline-flex p-2 mb-3 shadow-sm text-dark"><i
+                                        class="bi bi-pen"></i></div>
+                                <h6 class="fw-bold mb-4">Product Design Course</h6>
+                                <div class="progress" style="height: 6px;">
+                                    <div class="progress-bar" style="width: 45%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between text-muted small mt-2">
+                                    <span>Progress</span>
+                                    <span class="fw-bold" style="color: var(--brand-orange)">14/30 class</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resources -->
+                <div class="col-xl-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-title">Your Resources</h6>
+                            <ul class="list-group list-group-flush mt-3">
+                                <li class="list-group-item border-0 px-0 py-2">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="bg-danger text-white rounded p-2"><i class="bi bi-file-pdf"></i>
+                                            </div>
+                                            <div>
+                                                <p class="mb-0 fw-semibold fs-6">Auto-layout.pdf</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-4">
+                                            <small class="text-muted">8.5 MB</small>
+                                            <small class="text-muted cursor-pointer">Cancel</small>
+                                        </div>
+                                    </div>
+                                    <div class="progress"
+                                        style="height: 4px; margin-left: 52px; background-color: #ffe8d6;">
+                                        <div class="progress-bar" style="width: 75%;"></div>
+                                    </div>
+                                </li>
+                                <li
+                                    class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 py-2">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="bg-success text-white rounded p-2"><i class="bi bi-file-image"></i>
+                                        </div>
+                                        <div>
+                                            <p class="mb-0 fw-semibold fs-6">Design_Tips.png</p>
+                                            <small class="text-muted" style="font-size: 0.75rem;">Let's quickly create
+                                                some realistic and shiny metal</small>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-4">
+                                        <small class="text-muted">576 KB</small>
+                                        <small class="fw-semibold" style="color: var(--brand-orange);">Download</small>
+                                    </div>
+                                </li>
+                                <li
+                                    class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 py-2">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="bg-primary text-white rounded p-2"><i
+                                                class="bi bi-file-earmark"></i></div>
+                                        <div>
+                                            <p class="mb-0 fw-semibold fs-6">Basics_Of_UX.fig</p>
+                                            <small class="text-muted" style="font-size: 0.75rem;">An introductory guide
+                                                to the fundamental principles</small>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-4">
+                                        <small class="text-muted">2.5 MB</small>
+                                        <small class="fw-semibold" style="color: var(--brand-orange);">Download</small>
+                                    </div>
+                                </li>
+                            </ul>
+                            <button class="btn btn-light-brand w-100 mt-2 py-2">see more</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendar -->
+                <div class="col-xl-3 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <i class="bi bi-chevron-left small text-muted"></i>
+                                <span class="fw-bold" style="color: var(--brand-orange);">June 2024</span>
+                                <i class="bi bi-chevron-right small text-muted"></i>
+                            </div>
+                            <div class="row text-muted small fw-bold mb-2">
+                                <div class="col">S</div>
+                                <div class="col">M</div>
+                                <div class="col">T</div>
+                                <div class="col">W</div>
+                                <div class="col">T</div>
+                                <div class="col">F</div>
+                                <div class="col">S</div>
+                            </div>
+                            <div class="row small mb-2 align-items-center">
+                                <div class="col text-muted">30</div>
+                                <div class="col text-muted">31</div>
+                                <div class="col">1</div>
+                                <div class="col">2</div>
+                                <div class="col">3</div>
+                                <div class="col">4</div>
+                                <div class="col">5</div>
+                            </div>
+                            <div class="row small mb-2 align-items-center">
+                                <div class="col" style="color: var(--brand-orange);">6</div>
+                                <div class="col">7</div>
+                                <div class="col">8</div>
+                                <div class="col">9</div>
+                                <div class="col"><span class="calendar-day bg-brand shadow-sm">10</span></div>
+                                <div class="col">11</div>
+                                <div class="col">12</div>
+                            </div>
+                            <div class="row small mb-2 align-items-center">
+                                <div class="col text-danger fw-bold">13</div>
+                                <div class="col">14</div>
+                                <div class="col">15</div>
+                                <div class="col">16</div>
+                                <div class="col">17</div>
+                                <div class="col">18</div>
+                                <div class="col">19</div>
+                            </div>
+                            <div class="row small mb-2 align-items-center">
+                                <div class="col" style="color: var(--brand-orange);">20</div>
+                                <div class="col">21</div>
+                                <div class="col">22</div>
+                                <div class="col">23</div>
+                                <div class="col">24</div>
+                                <div class="col">25</div>
+                                <div class="col">26</div>
+                            </div>
+                            <div class="row small align-items-center">
+                                <div class="col" style="color: var(--brand-orange);">27</div>
+                                <div class="col">28</div>
+                                <div class="col">29</div>
+                                <div class="col">30</div>
+                                <div class="col"></div>
+                                <div class="col"></div>
+                                <div class="col"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= ROW 2 ================= -->
+            <div class="row">
+                <!-- Hours Spent Chart -->
+                <div class="col-xl-5 col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold mb-3">Hours Spent</h6>
+                            <div class="inner-box">
+                                <div class="d-flex justify-content-start align-items-center mb-4">
+                                    <div class="d-flex gap-4 small">
+                                        <span class="d-flex align-items-center gap-2"><i class="bi bi-square-fill"
+                                                style="color: var(--brand-orange); font-size: 0.7rem;"></i> Study</span>
+                                        <span class="d-flex align-items-center gap-2"><i class="bi bi-square-fill"
+                                                style="color: #fdf0ea; font-size: 0.7rem;"></i> Online Test</span>
+                                    </div>
+                                </div>
+                                <div style="position: relative; height: 200px; width: 100%;">
+                                    <canvas id="hoursSpentChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Performance Chart -->
+                <div class="col-xl-3 col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold mb-3">Performance</h6>
+                            <div class="inner-box d-flex flex-column align-items-center">
+                                <div class="d-flex w-100 justify-content-between align-items-center mb-4">
+                                    <p class="small text-muted mb-0 d-flex align-items-center gap-2"><i
+                                            class="bi bi-square-fill"
+                                            style="color: var(--brand-orange); font-size: 0.7rem;"></i> Assignment
+                                        Submission</p>
+                                    <select
+                                        class="form-select form-select-sm w-auto bg-light border-0 text-muted rounded-pill px-3 py-1"
+                                        style="font-size: 0.8rem; font-weight: 500;">
+                                        <option>Monthly</option>
+                                    </select>
+                                </div>
+                                <div class="position-relative mx-auto" style="width: 200px; height: 110px;">
+                                    <canvas id="performanceChart"></canvas>
+                                    <div class="position-absolute"
+                                        style="bottom: 12px; left: 50%; transform: translateX(-50%);">
+                                        <div style="position: relative; width: 18px; height: 18px;">
+                                            <div
+                                                style="width: 18px; height: 18px; border: 3px solid var(--brand-orange); border-radius: 50%; background: #fff; position: absolute; z-index: 2;">
+                                            </div>
+                                            <div
+                                                style="width: 3px; height: 50px; background-color: var(--brand-orange); position: absolute; bottom: 8px; left: 7.5px; transform-origin: bottom center; transform: rotate(55deg); z-index: 1; border-radius: 2px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-4 text-center">
+                                    <span class="text-muted small">Your Grade:</span> <span
+                                        class="fw-bold fs-5 text-dark">8.966</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- To do List (Brought back from the dead!) -->
+                <div class="col-xl-4 col-lg-12">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-title mb-4">To do List</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex align-items-start border-0 px-0 py-2">
+                                    <input class="form-check-input me-3 mt-1" type="checkbox">
+                                    <div>
+                                        <h6 class="mb-0 fw-semibold text-muted">Human Interaction Designs</h6><small
+                                            class="text-muted">Tuesday, 30 June 2024</small>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-start border-0 px-0 py-2">
+                                    <input class="form-check-input me-3 mt-1" type="checkbox">
+                                    <div>
+                                        <h6 class="mb-0 fw-semibold text-muted">Design system Basics</h6><small
+                                            class="text-muted">Monday, 24 June 2024</small>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-start border-0 px-0 py-2">
+                                    <input class="form-check-input me-3 mt-1" type="checkbox" checked>
+                                    <div>
+                                        <h6 class="mb-0 fw-semibold text-dark text-decoration-line-through">Introduction
+                                            to UI</h6><small class="text-muted">Friday, 10 June 2024</small>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-start border-0 px-0 py-2">
+                                    <input class="form-check-input me-3 mt-1" type="checkbox" checked>
+                                    <div>
+                                        <h6 class="mb-0 fw-semibold text-dark text-decoration-line-through">Basics of
+                                            Figma</h6><small class="text-muted">Friday, 05 June 2024</small>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= ROW 3 ================= -->
+            <div class="row">
+                <div class="col-xl-7">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h6 class="card-title mb-0">Recent enrolled classes</h6>
+                                <div class="d-flex gap-3 align-items-center">
+                                    <span class="fw-semibold">All</span>
+                                    <div class="bg-light rounded-circle p-2 px-3 text-dark"><i class="bi bi-search"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border rounded-4 p-3 mb-3 d-flex align-items-center gap-4"
+                                style="border-color: var(--brand-orange) !important;">
+                                <div class="bg-light p-3 rounded-4 shadow-sm text-dark"><i
+                                        class="bi bi-bezier2 fs-4"></i></div>
+                                <div class="flex-grow-1">
+                                    <h6 class="fw-bold" style="color: var(--brand-orange);">User Experience (UX) Design
+                                    </h6>
+                                    <div class="d-flex gap-4 text-muted small mt-2">
+                                        <span><i class="bi bi-clock"></i> 5:30hrs</span>
+                                        <span><i class="bi bi-card-list"></i> 05 Lessons</span>
+                                        <span><i class="bi bi-check-circle"></i> Assignments</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border rounded-4 p-3 d-flex align-items-center gap-4">
+                                <div class="bg-light p-3 rounded-4 shadow-sm text-dark"><i
+                                        class="bi bi-palette fs-4"></i></div>
+                                <div class="flex-grow-1">
+                                    <h6 class="fw-semibold text-dark">Visual Design and Branding</h6>
+                                    <div class="d-flex gap-4 text-muted small mt-2">
+                                        <span><i class="bi bi-clock"></i> 4:00hrs</span>
+                                        <span><i class="bi bi-card-list"></i> 03 Lessons</span>
+                                        <span><i class="bi bi-check-circle"></i> Assignments</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-5">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-title mb-4">Upcoming Lesson</h6>
+                            <div class="d-flex justify-content-between align-items-center bg-light rounded-4 p-3 mb-3">
+                                <div class="d-flex gap-3 align-items-center">
+                                    <div class="text-dark"><i class="bi bi-layers fs-4"></i></div>
+                                    <div>
+                                        <h6 class="mb-1 fw-bold">UX Design Fundamentals</h6><small
+                                            class="text-muted">5:30pm</small>
+                                    </div>
+                                </div>
+                                <button class="btn btn-brand px-4 py-1">Join</button>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center bg-light rounded-4 p-3">
+                                <div class="d-flex gap-3 align-items-center">
+                                    <div class="text-dark"><i class="bi bi-check-circle fs-4"></i></div>
+                                    <div>
+                                        <h6 class="mb-1 fw-bold">Interaction Design</h6><small
+                                            class="text-muted">9:00pm</small>
+                                    </div>
+                                </div>
+                                <button class="btn btn-light-brand px-4 py-1">Join</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Our modular components -->
+    <script src="js/components.js"></script>
+
+    <script>
+        // Load components and set Dashboard as active
+        loadComponents('nav-dashboard');
+
+        $(document).ready(function () {
+            // --- Hours Spent Bar Chart ---
+            const ctxHours = document.getElementById('hoursSpentChart').getContext('2d');
+            new Chart(ctxHours, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                    datasets: [
+                        { label: 'Study', data: [35, 25, 60, 40, 15], backgroundColor: '#ff5a00', borderRadius: 6, barPercentage: 0.55, categoryPercentage: 0.7 },
+                        { label: 'Online Test', data: [25, 15, 10, 20, 5], backgroundColor: '#fdf0ea', borderRadius: 6, barPercentage: 0.55, categoryPercentage: 0.7 }
+                    ]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    interaction: { mode: 'index', intersect: false },
+                    scales: {
+                        x: { stacked: true, grid: { display: false } },
+                        y: { stacked: true, border: { display: false }, ticks: { stepSize: 20, callback: function (value) { return value + ' Hr'; } } }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: '#1a1a2e', titleDisplay: false, padding: 10, cornerRadius: 8, usePointStyle: true, boxPadding: 6,
+                            callbacks: { label: function (context) { return context.raw + ' Hr'; } }
+                        }
+                    }
+                }
+            });
+
+            // --- Performance Gauge Chart ---
+            const ctxPerf = document.getElementById('performanceChart').getContext('2d');
+            new Chart(ctxPerf, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Performance', 'Remaining'],
+                    datasets: [{ data: [89.6, 10.4], backgroundColor: ['#ff5a00', '#f2f2f2'], borderWidth: 0, borderRadius: 20, cutout: '80%' }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false, circumference: 180, rotation: -90,
+                    plugins: { legend: { display: false }, tooltip: { enabled: false } }, layout: { padding: 0 }
+                }
+            });
+        });
+
+        // Make To-Do List checkboxes cross out text
+        $('.form-check-input').on('change', function () {
+            const title = $(this).siblings('div').find('h6');
+            if ($(this).is(':checked')) {
+                title.addClass('text-decoration-line-through text-dark').removeClass('text-muted');
+            } else {
+                title.removeClass('text-decoration-line-through text-dark').addClass('text-muted');
+            }
+        });
+
+        // Make Join & See More buttons interactive
+        $('.btn-brand:contains("Join"), .btn-light-brand:contains("Join")').on('click', function () {
+            alert("Connecting to virtual classroom...");
+        });
+        $('.btn-light-brand:contains("see more")').on('click', function () {
+            alert("Loading more resources...");
+        });
+
+        // Make To-Do List checkboxes cross out text
+        $('.form-check-input').on('change', function () {
+            const title = $(this).siblings('div').find('h6');
+            if ($(this).is(':checked')) {
+                title.addClass('text-decoration-line-through text-dark').removeClass('text-muted');
+            } else {
+                title.removeClass('text-decoration-line-through text-dark').addClass('text-muted');
+            }
+        });
+
+        // Make Join & See More buttons interactive
+        $('.btn-brand:contains("Join"), .btn-light-brand:contains("Join")').on('click', function () {
+            alert("Connecting to virtual classroom...");
+        });
+        $('.btn-light-brand:contains("see more")').on('click', function () {
+            alert("Loading more resources...");
+        });
+    </script>
+
+</body>
+
+</html>

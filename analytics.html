@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designo - Analytics & Reports</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="d-flex">
+        <div id="sidebar-container"></div>
+
+        <div class="main-content w-100">
+            <div id="navbar-container"></div>
+
+            <div class="mb-4 d-flex justify-content-between align-items-end">
+                <div>
+                    <h2 class="fw-bold mb-1" style="color: #1a1a1a;">Reports & Analytics</h2>
+                    <p class="text-muted mb-0">Track platform engagement and user growth.</p>
+                </div>
+                <div class="d-flex gap-3">
+                    <button
+                        class="btn btn-white border fw-semibold text-muted d-flex align-items-center gap-2 bg-white">
+                        <i class="bi bi-calendar3"></i> Last 30 Days
+                    </button>
+                    <button class="btn btn-brand px-4 py-2 fw-semibold d-flex align-items-center gap-2">
+                        <i class="bi bi-cloud-download"></i> Export CSV
+                    </button>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-4">
+                <div class="col-xl-4 col-md-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4 d-flex align-items-center gap-3">
+                            <div class="p-3 rounded-circle"
+                                style="background-color: var(--brand-orange-light); color: var(--brand-orange);">
+                                <i class="bi bi-people-fill fs-3"></i>
+                            </div>
+                            <div>
+                                <p class="text-muted mb-1 small fw-semibold text-uppercase">Total Active Users</p>
+                                <h3 class="fw-bold mb-0">12,450</h3>
+                                <div class="mt-1">
+                                    <span class="text-success fw-bold small"><i class="bi bi-arrow-up-right"></i>
+                                        14.5%</span>
+                                    <span class="text-muted small">vs last month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-md-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4 d-flex align-items-center gap-3">
+                            <div class="p-3 rounded-circle bg-light text-dark">
+                                <i class="bi bi-journal-check fs-3"></i>
+                            </div>
+                            <div>
+                                <p class="text-muted mb-1 small fw-semibold text-uppercase">Course Completions</p>
+                                <h3 class="fw-bold mb-0">8,192</h3>
+                                <div class="mt-1">
+                                    <span class="text-success fw-bold small"><i class="bi bi-arrow-up-right"></i>
+                                        7.2%</span>
+                                    <span class="text-muted small">vs last month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-md-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4 d-flex align-items-center gap-3">
+                            <div class="p-3 rounded-circle" style="background-color: #fce8e6; color: #d93025;">
+                                <i class="bi bi-clock-history fs-3"></i>
+                            </div>
+                            <div>
+                                <p class="text-muted mb-1 small fw-semibold text-uppercase">Avg. Session Time</p>
+                                <h3 class="fw-bold mb-0">24m 15s</h3>
+                                <div class="mt-1">
+                                    <span class="text-danger fw-bold small"><i class="bi bi-arrow-down-right"></i>
+                                        1.2%</span>
+                                    <span class="text-muted small">vs last month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-xl-8">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4">
+                            <h6 class="fw-bold mb-4">Platform Engagement Trends</h6>
+                            <div style="height: 320px; width: 100%;">
+                                <canvas id="engagementLineChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h6 class="fw-bold mb-4">Users by Device</h6>
+                            <div class="flex-grow-1 d-flex justify-content-center align-items-center"
+                                style="position: relative; height: 250px;">
+                                <canvas id="deviceDoughnutChart"></canvas>
+                            </div>
+                            <div class="d-flex justify-content-center gap-4 mt-3">
+                                <div class="text-center">
+                                    <i class="bi bi-square-fill text-dark small me-1"></i>
+                                    <span class="fw-semibold small">Desktop</span>
+                                </div>
+                                <div class="text-center">
+                                    <i class="bi bi-square-fill small me-1" style="color: var(--brand-orange);"></i>
+                                    <span class="fw-semibold small">Mobile</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/components.js"></script>
+
+    <script>
+        // 1. Initialize our standard layout layout
+        loadComponents('nav-analytics');
+
+        $(document).ready(function () {
+            // 2. Configure the Line Chart (Engagement Trends)
+            const lineCtx = document.getElementById('engagementLineChart').getContext('2d');
+            new Chart(lineCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6'],
+                    datasets: [
+                        {
+                            label: 'Returning Users',
+                            data: [1200, 1900, 1500, 2200, 2800, 2500],
+                            borderColor: '#ff5a00', /* Our Brand Orange */
+                            backgroundColor: 'rgba(255, 90, 0, 0.1)', /* Light Orange Fill */
+                            borderWidth: 3,
+                            tension: 0.4, /* Makes the line smooth and curvy */
+                            fill: true,
+                            pointBackgroundColor: '#ffffff',
+                            pointBorderColor: '#ff5a00',
+                            pointBorderWidth: 2,
+                            pointRadius: 4
+                        },
+                        {
+                            label: 'New Signups',
+                            data: [800, 1100, 900, 1300, 1600, 1200],
+                            borderColor: '#2b2b2b', /* Dark Grey */
+                            borderWidth: 2,
+                            borderDash: [5, 5], /* Dashed line */
+                            tension: 0.4,
+                            fill: false,
+                            pointRadius: 0
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'top', align: 'end', labels: { usePointStyle: true, boxWidth: 8 } }
+                    },
+                    scales: {
+                        x: { grid: { display: false } },
+                        y: { grid: { color: '#f0f0f0' }, border: { display: false } }
+                    },
+                    interaction: { mode: 'index', intersect: false }
+                }
+            });
+
+            // 3. Configure the Doughnut Chart (Device Usage)
+            const doughnutCtx = document.getElementById('deviceDoughnutChart').getContext('2d');
+            new Chart(doughnutCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Desktop', 'Mobile', 'Tablet'],
+                    datasets: [{
+                        data: [65, 25, 10],
+                        backgroundColor: [
+                            '#2b2b2b',   /* Dark Grey */
+                            '#ff5a00',   /* Brand Orange */
+                            '#e0e0e0'    /* Light Grey */
+                        ],
+                        borderWidth: 0,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '75%', /* Makes the ring thinner */
+                    plugins: {
+                        legend: { display: false } /* We built a custom HTML legend instead */
+                    }
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            // Automatically make any generic action buttons show an alert
+            $('button:contains("Export"), button:contains("Filter"), button:contains("Sort"), button:contains("Download"), button:contains("Watch Now"), button:contains("Upload"), button:contains("Add")').on('click', function (e) {
+                e.preventDefault();
+                const action = $(this).text().trim();
+                alert("Action triggered: " + action + "\n(This feature will be connected to the backend database later).");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

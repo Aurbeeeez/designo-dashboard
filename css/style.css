@@ -1,0 +1,864 @@
+/* =========================================
+   GLOBAL VARIABLES & TYPOGRAPHY
+========================================= */
+:root {
+    --brand-orange: #ff5a00;
+    --brand-orange-light: #fff0e6;
+    --text-main: #2b2b2b;
+    --text-muted: #8b8b8b;
+    --bg-body: #fcfcfd;
+    /* Much lighter off-white to match Figma */
+    --border-color: #f0f0f0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    letter-spacing: -0.2px;
+}
+
+.main-content {
+    margin-left: 260px;
+    padding: 30px 40px;
+    min-height: 100vh;
+}
+
+/* =========================================
+   SIDEBAR & NAVBAR
+========================================= */
+.sidebar {
+    width: 260px;
+    min-height: 100vh;
+    background: #ffffff;
+    border-right: 1px solid var(--border-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.sidebar-brand {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #000;
+}
+
+.sidebar-brand i {
+    color: var(--brand-orange);
+}
+
+/* Sidebar Active Icon Fix (Restored to default white) */
+.nav-link.active i {
+    color: #ffffff !important;
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    border-radius: 0;
+    margin-left: 0;
+}
+
+/* Apply the white circle ONLY to the Dashboard icon */
+#nav-dashboard.active i {
+    background-color: #ffffff;
+    color: var(--brand-orange) !important;
+    width: 26px;
+    height: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: -4px;
+}
+
+/* Make inner boxes look identical to Figma */
+.inner-box {
+    border: 1px solid #f0f0f0;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.nav-link {
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 2px 15px;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--text-main);
+    background-color: #fafafa;
+}
+
+.nav-link.active {
+    background-color: var(--brand-orange) !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(255, 90, 0, 0.2);
+}
+
+.nav-link.active i {
+    color: #ffffff !important;
+}
+
+/* Navbar Search */
+.search-wrapper {
+    position: relative;
+    width: 320px;
+}
+
+.search-wrapper input {
+    border: 1px solid var(--brand-orange);
+    border-radius: 8px;
+    padding: 8px 12px 8px 40px;
+    box-shadow: none;
+    font-size: 0.9rem;
+}
+
+.search-wrapper .bi-search {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--brand-orange);
+    font-weight: bold;
+}
+
+.search-wrapper .shortcut {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--brand-orange);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* =========================================
+   UI COMPONENTS (Cards, Buttons, Inputs)
+========================================= */
+.card {
+    background-color: #ffffff !important;
+    /* Forces pure white cards */
+    border: 1px solid #f2f2f2;
+    border-radius: 16px;
+    /* Slightly sharper corners like Figma */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.02);
+    /* Softer shadow */
+    margin-bottom: 24px;
+}
+
+.card-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.btn-brand {
+    background-color: var(--brand-orange);
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn-brand:hover {
+    background-color: #e04f00;
+    color: #fff;
+}
+
+.btn-light-brand {
+    background-color: var(--brand-orange-light);
+    color: var(--brand-orange);
+    border: none;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.progress {
+    height: 6px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+}
+
+.progress-bar {
+    background-color: var(--brand-orange);
+    border-radius: 10px;
+}
+
+.form-check-input {
+    width: 1.2em;
+    height: 1.2em;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: var(--brand-orange);
+    border-color: var(--brand-orange);
+}
+
+/* =========================================
+   PAGE SPECIFIC: DASHBOARD (Screen 1)
+========================================= */
+.bg-brand {
+    background-color: var(--brand-orange) !important;
+    color: #ffffff !important;
+}
+
+.calendar-day {
+    width: 26px;
+    height: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* =========================================
+   PAGE SPECIFIC: ASSIGNMENTS (Screen 2)
+========================================= */
+.filter-pill {
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    padding: 10px 24px;
+    background-color: #fff;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.filter-pill .bi-search {
+    color: var(--text-main);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.filter-pill span {
+    color: var(--brand-orange);
+    cursor: pointer;
+}
+
+.custom-table-header {
+    background-color: #fafafa;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 16px 24px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.custom-table-row {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 16px 24px;
+    margin-bottom: 12px;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.custom-table-row:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    border-color: #e0e0e0;
+}
+
+.col-title {
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.col-muted {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.col-action {
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.col-action:hover {
+    color: var(--brand-orange);
+}
+
+.col-action.submitted {
+    color: #c0c0c0;
+    cursor: default;
+}
+
+.status-badge {
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-done {
+    background-color: #ecfdf3;
+    color: #027a48;
+}
+
+.status-done .dot {
+    background-color: #12b76a;
+}
+
+.status-progress {
+    background-color: #eff8ff;
+    color: #175cd3;
+}
+
+.status-progress .dot {
+    background-color: #2e90fa;
+}
+
+.status-pending {
+    background-color: #fef3f2;
+    color: #b42318;
+}
+
+.status-pending .dot {
+    background-color: #f04438;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.page-btn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.page-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.page-btn.active {
+    background-color: var(--brand-orange);
+    color: #fff;
+}
+
+.page-btn.nav-arrow {
+    background-color: #f5f5f5;
+}
+
+/* =========================================
+   PAGE SPECIFIC: SCHEDULE (Screen 3)
+========================================= */
+
+/* Top Navigation Tabs */
+.calendar-tab {
+    color: var(--text-muted);
+    font-weight: 600;
+    padding: 8px 16px;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.calendar-tab:hover {
+    color: var(--text-main);
+}
+
+.calendar-tab.active {
+    color: var(--brand-orange);
+    border-bottom: 2px solid var(--brand-orange);
+}
+
+/* Calendar Grid Layout */
+.calendar-wrapper {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    margin-top: 24px;
+}
+
+.calendar-header-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #fcfcfc;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.calendar-header-cell {
+    padding: 16px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    /* Forces rows to be at least 140px tall, but expand if lots of events */
+    grid-auto-rows: minmax(140px, auto);
+}
+
+.calendar-cell {
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Remove right border on the last column to prevent double borders */
+.calendar-cell:nth-child(7n) {
+    border-right: none;
+}
+
+.calendar-date {
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.calendar-date.text-muted {
+    color: #c4c4c4 !important;
+}
+
+/* For prev/next month dates */
+
+/* Event Pills */
+.event-pill {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+/* Pixel-perfect Figma Colors */
+.event-red {
+    background-color: #fdf3f3;
+    color: #d93a49;
+}
+
+.event-yellow {
+    background-color: #fdfae8;
+    color: #9c8925;
+}
+
+.event-green {
+    background-color: #f0f9f0;
+    color: #378b40;
+}
+
+.event-purple {
+    background-color: #f6effe;
+    color: #7b5acb;
+}
+
+.event-orange {
+    background-color: #fef5eb;
+    color: #d66b22;
+}
+
+/* =========================================
+   PAGE SPECIFIC: RECORDINGS (Screen 4)
+========================================= */
+
+.recording-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid var(--border-color);
+}
+
+.recording-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.thumb-container {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+}
+
+.thumb-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Category Border Colors */
+.border-uxm {
+    border-left: 6px solid #b589f3 !important;
+}
+
+.border-color {
+    border-left: 6px solid #f9b74d !important;
+}
+
+.border-design {
+    border-left: 6px solid #56ccf2 !important;
+}
+
+.btn-watch {
+    background-color: var(--brand-orange) !important;
+    border: none;
+    color: white !important;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 6px 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-download-text {
+    color: var(--brand-orange);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-download-outline {
+    background: transparent;
+    border: 1px solid #eee !important;
+    color: var(--brand-orange) !important;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 6px 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.2s;
+}
+
+.filter-pill span.separator {
+    color: #ddd;
+    margin: 0 5px;
+}
+
+.btn-download-outline:hover {
+    background-color: var(--brand-orange-light);
+}
+
+/* Pagination centering fix */
+.pagination-wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* =========================================
+   REFINED NOTES UI (Screen 5)
+========================================= */
+
+/* Button refinements for Header */
+.btn-outline-custom {
+    border: 1px solid var(--brand-orange) !important;
+    color: var(--brand-orange) !important;
+    background: transparent;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 8px 16px;
+    transition: all 0.2s;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--brand-orange-light);
+}
+
+/* Note Card Specifics */
+.note-img-preview {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.note-card {
+    border: 1px solid #eee;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.badge-pill-custom {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+/* Color Palette from Image */
+.bg-weekly {
+    background: #fefce8;
+    color: #ca8a04;
+}
+
+.bg-product {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.bg-monthly {
+    background: #f0fdf4;
+    color: #16a34a;
+}
+
+.bg-business {
+    background: #faf5ff;
+    color: #9333ea;
+}
+
+.bg-personal {
+    background: #fff7ed;
+    color: #ea580c;
+}
+
+.bg-badge {
+    background: #fefce8;
+    color: #ca8a04;
+}
+
+/* =========================================
+   REFINED NOTES UI (Final Polish)
+========================================= */
+
+/* Hollow Header Buttons */
+.btn-outline-orange {
+    border: 1.5px solid var(--brand-orange) !important;
+    color: var(--brand-orange) !important;
+    background: #ffffff;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 8px 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Force equal height cards and strict spacing */
+.note-card {
+    border: 1px solid #eee;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    height: 100%;
+    /* Ensures all cards in a row match height */
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s;
+}
+
+.note-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.note-body {
+    flex-grow: 1;
+    /* Pushes footer to the bottom */
+}
+
+/* Image Previews */
+.note-img-preview {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/* =========================================
+   PAGE SPECIFIC: USER MANAGEMENT
+========================================= */
+
+.table-custom th {
+    background-color: #fcfcfd;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--border-color);
+    padding: 16px;
+    letter-spacing: 0.5px;
+}
+
+.table-custom td {
+    padding: 16px;
+    vertical-align: middle;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.badge-active {
+    background-color: #e6f4ea;
+    color: #1e8e3e;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.badge-inactive {
+    background-color: #fce8e6;
+    color: #d93025;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.action-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    transition: color 0.2s;
+    font-size: 1.1rem;
+}
+
+.action-btn:hover {
+    color: var(--brand-orange);
+}
+
+/* =========================================
+   DARK MODE THEME VARIABLES & OVERRIDES
+========================================= */
+:root[data-theme="dark"] {
+    --bg-body: #121212;
+    --bg-surface: #1e1e1e;
+    --text-main: #f5f5f5;
+    --text-muted: #a0a0a0;
+    --border-color: #2d2d2d;
+    --brand-orange-light: #3a1d0d;
+}
+
+/* Force background and text colors on all major containers */
+[data-theme="dark"] body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+}
+
+[data-theme="dark"] .card,
+[data-theme="dark"] .sidebar,
+[data-theme="dark"] .modal-content,
+[data-theme="dark"] .inner-box,
+[data-theme="dark"] .note-card,
+[data-theme="dark"] .calendar-wrapper,
+[data-theme="dark"] .table-custom th,
+[data-theme="dark"] .filter-pill,
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .bg-light,
+[data-theme="dark"] .custom-table-row {
+    background-color: var(--bg-surface) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-main) !important;
+}
+
+[data-theme="dark"] .text-dark {
+    color: var(--text-main) !important;
+}
+
+[data-theme="dark"] .text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* Input fields and dropdowns */
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] .dropdown-menu {
+    background-color: var(--bg-body) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-main) !important;
+}
+
+/* Search Wrapper overrides */
+[data-theme="dark"] .search-wrapper input {
+    background-color: var(--bg-surface) !important;
+    color: var(--text-main) !important;
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS (Media Queries)
+========================================= */
+@media (max-width: 768px) {
+    /* Hide sidebar off-screen by default on mobile */
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+    }
+    
+    /* Class to slide it back in */
+    .sidebar.mobile-open {
+        transform: translateX(0);
+    }
+
+    /* Remove the large left margin on the main content */
+    .main-content {
+        margin-left: 0 !important;
+        padding: 20px 15px !important;
+    }
+
+    /* Stack the search bar and top-right icons */
+    #navbar-container .d-flex.justify-content-between {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch !important;
+    }
+
+    /* Make search bar full width */
+    .search-wrapper {
+        width: 100% !important;
+    }
+}

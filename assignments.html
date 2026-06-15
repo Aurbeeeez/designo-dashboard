@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Dashboard - Assignments</title>
+
+    <!-- Bootstrap & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS (Inherits all the polished colors and styling) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="d-flex">
+        <!-- Injected Sidebar -->
+        <div id="sidebar-container"></div>
+
+        <div class="main-content w-100">
+            <!-- Injected Navbar -->
+            <div id="navbar-container"></div>
+
+            <!-- Header & Filter -->
+            <div class="d-flex justify-content-between align-items-end mb-4 mt-2">
+                <div>
+                    <h2 class="fw-bold mb-1" style="color: #1a1a1a; font-size: 2rem;">Assignments</h2>
+                    <p class="text-muted fs-5 mb-0">View and manage your course assignments</p>
+                </div>
+                <div class="filter-pill bg-white">
+                    <i class="bi bi-search"></i> Filter by <span>dates</span> <span
+                        class="text-muted fw-light mx-1">|</span> <span>Status</span>
+                </div>
+            </div>
+
+            <!-- Data Table -->
+            <div class="w-100 mt-4">
+                <!-- Table Header -->
+                <div class="row custom-table-header mx-0 align-items-center">
+                    <div class="col-3">Assignment Title</div>
+                    <div class="col-3">Course/lessons</div>
+                    <div class="col-2">Due Date</div>
+                    <div class="col-2">Status</div>
+                    <div class="col-2 text-center">Submit</div>
+                </div>
+
+                <!-- Row 1 -->
+                <div class="row custom-table-row mx-0 align-items-center">
+                    <div class="col-3 col-title text-truncate">Conducting User Resea...</div>
+                    <div class="col-3 col-muted text-truncate">User Research and Per...</div>
+                    <div class="col-2 col-muted">July 1, 2024</div>
+                    <div class="col-2"><span class="status-badge status-done"><span class="dot"></span> Done</span>
+                    </div>
+                    <div class="col-2 text-center col-action submitted fw-bold">Submitted</div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="row custom-table-row mx-0 align-items-center">
+                    <div class="col-3 col-title text-truncate">Competitive Analysis R...</div>
+                    <div class="col-3 col-muted text-truncate">Competitive Analysis in...</div>
+                    <div class="col-2 col-muted">July 25, 2024</div>
+                    <div class="col-2"><span class="status-badge status-progress"><span class="dot"></span>
+                            Progress</span></div>
+                    <div class="col-2 text-center col-action">Upload</div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="row custom-table-row mx-0 align-items-center">
+                    <div class="col-3 col-title text-truncate">Creating Wireframes</div>
+                    <div class="col-3 col-muted text-truncate">Wireframing and Protot...</div>
+                    <div class="col-2 col-muted">August 1, 2024</div>
+                    <div class="col-2"><span class="status-badge status-progress"><span class="dot"></span>
+                            Progress</span></div>
+                    <div class="col-2 text-center col-action">Upload</div>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="row custom-table-row mx-0 align-items-center">
+                    <div class="col-3 col-title text-truncate">Usability Testing and F...</div>
+                    <div class="col-3 col-muted text-truncate">Usability Testing and It...</div>
+                    <div class="col-2 col-muted">August 22, 2024</div>
+                    <div class="col-2"><span class="status-badge status-pending"><span class="dot"></span>
+                            Pending</span></div>
+                    <div class="col-2 text-center col-action">Upload</div>
+                </div>
+
+                <!-- Row 5 -->
+                <div class="row custom-table-row mx-0 align-items-center">
+                    <div class="col-3 col-title text-truncate">Developing Visual Desi...</div>
+                    <div class="col-3 col-muted text-truncate">Visual Design and Bran...</div>
+                    <div class="col-2 col-muted">August 29, 2024</div>
+                    <div class="col-2"><span class="status-badge status-pending"><span class="dot"></span>
+                            Pending</span></div>
+                    <div class="col-2 text-center col-action">Upload</div>
+                </div>
+
+                <!-- Row 6 -->
+                <div class="row custom-table-row mx-0 align-items-center">
+                    <div class="col-3 col-title text-truncate">Creating a Design Syst...</div>
+                    <div class="col-3 col-muted text-truncate">Design Systems and C...</div>
+                    <div class="col-2 col-muted">September 5, 2024</div>
+                    <div class="col-2"><span class="status-badge status-pending"><span class="dot"></span>
+                            Pending</span></div>
+                    <div class="col-2 text-center col-action">Upload</div>
+                </div>
+
+                <!-- Row 7 -->
+                <div class="row custom-table-row mx-0 align-items-center">
+                    <div class="col-3 col-title text-truncate">Creating Wireframes</div>
+                    <div class="col-3 col-muted text-truncate">Wireframing and Protot...</div>
+                    <div class="col-2 col-muted">August 1, 2024</div>
+                    <div class="col-2"><span class="status-badge status-progress"><span class="dot"></span>
+                            Progress</span></div>
+                    <div class="col-2 text-center col-action">Upload</div>
+                </div>
+
+                <!-- Row 8 -->
+                <div class="row custom-table-row mx-0 align-items-center">
+                    <div class="col-3 col-title text-truncate">Usability Testing and F...</div>
+                    <div class="col-3 col-muted text-truncate">Usability Testing and It...</div>
+                    <div class="col-2 col-muted">August 22, 2024</div>
+                    <div class="col-2"><span class="status-badge status-pending"><span class="dot"></span>
+                            Pending</span></div>
+                    <div class="col-2 text-center col-action">Upload</div>
+                </div>
+
+                <!-- Row 9 -->
+                <div class="row custom-table-row mx-0 align-items-center">
+                    <div class="col-3 col-title text-truncate">Conducting User Resea...</div>
+                    <div class="col-3 col-muted text-truncate">User Research and Per...</div>
+                    <div class="col-2 col-muted">July 1, 2024</div>
+                    <div class="col-2"><span class="status-badge status-done"><span class="dot"></span> Done</span>
+                    </div>
+                    <div class="col-2 text-center col-action submitted fw-bold">Submitted</div>
+                </div>
+
+                <!-- Row 10 -->
+                <div class="row custom-table-row mx-0 align-items-center">
+                    <div class="col-3 col-title text-truncate">Competitive Analysis R...</div>
+                    <div class="col-3 col-muted text-truncate">Competitive Analysis in...</div>
+                    <div class="col-2 col-muted">July 25, 2024</div>
+                    <div class="col-2"><span class="status-badge status-progress"><span class="dot"></span>
+                            Progress</span></div>
+                    <div class="col-2 text-center col-action">Upload</div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination-container">
+                <div class="d-flex align-items-center gap-2 text-main fw-medium">
+                    Show
+                    <select class="form-select form-select-sm d-inline-block w-auto border-1"
+                        style="box-shadow: none; border-radius: 6px; padding: 6px 30px 6px 12px;">
+                        <option>10</option>
+                        <option>20</option>
+                        <option>50</option>
+                    </select>
+                    Row
+                </div>
+                <div class="d-flex gap-2">
+                    <button class="page-btn nav-arrow"><i class="bi bi-chevron-left"></i></button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button><button class="page-btn">3</button><button
+                        class="page-btn">4</button><button class="page-btn">5</button>
+                    <button class="page-btn">...</button><button class="page-btn">10</button>
+                    <button class="page-btn nav-arrow"><i class="bi bi-chevron-right"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Our modular components -->
+    <script src="js/components.js"></script>
+
+    <script>
+        // Load components and set Assignments as the active tab!
+        loadComponents('nav-assignments');
+
+        $(document).ready(function () {
+            // Handle pagination UI click states
+            $('.page-btn').not('.nav-arrow').on('click', function () {
+                if ($(this).text() !== '...') {
+                    $('.page-btn').removeClass('active');
+                    $(this).addClass('active');
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            // Automatically make any generic action buttons show an alert
+            $('button:contains("Export"), button:contains("Filter"), button:contains("Sort"), button:contains("Download"), button:contains("Watch Now"), button:contains("Upload"), button:contains("Add")').on('click', function (e) {
+                e.preventDefault();
+                const action = $(this).text().trim();
+                alert("Action triggered: " + action + "\n(This feature will be connected to the backend database later).");
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
